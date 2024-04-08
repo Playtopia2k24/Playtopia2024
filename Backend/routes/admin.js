@@ -51,6 +51,7 @@ router.get("/getplayers", async (req, res) => {
                 }
                 
                 allUsers.push(data);
+                if(allUsers.length==5){break}
             }
 
         res.send({success:"true", data:allUsers})
